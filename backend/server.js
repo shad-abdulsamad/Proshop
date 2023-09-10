@@ -1,5 +1,6 @@
 import express from 'express';
-import products from './data/products';
+import products from './data/products.js'
+
 const port = 5000;
 
 const app = express();
