@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 
 const ProductScreen = () => {
     const {id:productId} = useParams();
-    const product = products.find(p => p._id == productId);
+    const product = products.find(p => p._id === productId);
   return (
     <>
         <Link className='btn btn-light my-3' to='/'>Go Back</Link>
@@ -55,7 +55,7 @@ const ProductScreen = () => {
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                <Button className='btn-block' type='button' disabled = {product.countInStock==0}>
+                <Button className='btn-block' type='button' disabled = {product.countInStock===0}>
                 Add to Cart
                 </Button>
                 </ListGroup.Item>
