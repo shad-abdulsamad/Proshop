@@ -1,6 +1,5 @@
 const products = [
     {
-        _id:1,
         name: "Airpods Wireless Bluetooth Headphones",
         image: '/images/airpods.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad blanditiis vitae eveniet, odio labore, laborum quasi veniam non omnis magni. Sapiente eligendi repellat dolorum, quibusdam modi itaque accusamus similique.',
@@ -14,7 +13,6 @@ const products = [
     },
 
     {
-        _id:2,
         name: "Cannon EOS 80D DSLR Camera",
         image: '/images/camera.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad blanditiis vitae eveniet, odio labore, laborum quasi veniam non omnis magni. Sapiente eligendi repellat dolorum, quibusdam modi itaque accusamus similique.',
@@ -28,7 +26,6 @@ const products = [
     },
 
     {
-        _id:3,
         name: "Logitech G-Series Gaming Mouse",
         image: '/images/mouse.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad blanditiis vitae eveniet, odio labore, laborum quasi veniam non omnis magni. Sapiente eligendi repellat dolorum, quibusdam modi itaque accusamus similique.',
@@ -42,7 +39,6 @@ const products = [
     },
 
     {
-        _id:4,
         name: "iPhone 11 Pro 256GB Memory",
         image: '/images/phone.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad blanditiis vitae eveniet, odio labore, laborum quasi veniam non omnis magni. Sapiente eligendi repellat dolorum, quibusdam modi itaque accusamus similique.',
@@ -56,7 +52,6 @@ const products = [
     },
 
     {
-        _id:5,
         name: "Sony Playstation 5 White",
         image: '/images/playstation.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad blanditiis vitae eveniet, odio labore, laborum quasi veniam non omnis magni. Sapiente eligendi repellat dolorum, quibusdam modi itaque accusamus similique.',
@@ -70,7 +65,6 @@ const products = [
     },
 
     {
-        _id:6,
         name: "Amazon Echo Dot 3rd Generation",
          image: '/images/alexa.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad blanditiis vitae eveniet, odio labore, laborum quasi veniam non omnis magni. Sapiente eligendi repellat dolorum, quibusdam modi itaque accusamus similique.',
