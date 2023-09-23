@@ -32,8 +32,19 @@ const cartSlice = createSlice({
             state.taxPrice = addDecimals(Number((0.15 * state.itemsPrice).toFixed()));
             
 
+            //calculating the total price
+            state.totalPrice = (
+                Number(state.itemsPrice) + 
+                Number(state.shippingPrice) + 
+                Number(state.taxPrice)
+            ).toFixed(2);
+
+            localStorage.setItem('cart', JSON.stringify(state));
+
         }
     }
 });
+
+export const {addToCart} = cartSlice.actions;
 
 export default cartSlice.reducer;
