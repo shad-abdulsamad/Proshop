@@ -28,6 +28,8 @@ const cartSlice = createSlice({
             // if order id over $100 then shipping is free else it is $10
             state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 10);
 
+            // calculating the tax price (15%)
+            state.taxPrice = addDecimals(Number((0.15 * state.itemsPrice).toFixed()));
             
 
         }
