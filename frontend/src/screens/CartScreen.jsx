@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Row, Col, ListGroup, Image, Form, Button, Card} from 'react-bootstrap';
 import {FaTrash} from 'react-icons/fa';
 import Message from "../components/Message";
-import { addToCart } from '../slices/cartSlice';
+import { addToCart, removeFromCart } from '../slices/cartSlice';
  
 const CartScreen = () => {
     const navigate = useNavigate();
@@ -16,11 +16,21 @@ const CartScreen = () => {
     dispatch(addToCart({...product, qty}));
   }
 
+  const removeFromCartHandler = async (id)=>{
+    dispatch(removeFromCart(id));
+  }
+
+  const checkoutHandler = ()=>{
+    navigate('/login?=redirect=/shipping');
+  }
+
+  
+
   return (
     <Row>
       <Col md = {8}>
       <h1 style={{marginBottom: '20px'}}>Shopping Cart</h1>
-      {cartItems.length === 0 ? (<Message><div>Your Cart is empty</div><div><Link to='/'>Go Back</Link></div></Message>) :
+      {cartItems.length === 0 ? (<div><p>Yor cart is empty</p><Link to='/'>Go Back</Link></div>) :
        (<ListGroup>{cartItems.map((item) => 
        <ListGroup.Item key={item._id}>
        <Row>
@@ -46,7 +56,7 @@ const CartScreen = () => {
     </Form.Control>
        </Col>
        <Col md={2}>
-        <Button type='button' variant='light'><FaTrash/></Button>
+        <Button type='button' variant='light' onClick={()=>removeFromCartHandler(item._id)}><FaTrash/></Button>
        </Col>
        </Row>
        </ListGroup.Item> )}
@@ -61,7 +71,7 @@ const CartScreen = () => {
             ${cartItems.reduce((acc,item)=>acc+item.qty*item.price, 0).toFixed(2)}
           </ListGroup>
           <ListGroup.Item>
-          <Button type='button' className='btn-block' disabled={cartItems.length===0} style={{margin:'20px', padding:'10px'}}>
+          <Button type='button' className='btn-block' disabled={cartItems.length===0} style={{margin:'20px', padding:'10px'}} onClick={checkoutHandler}>
             Proceed To Checkout
           </Button>
           </ListGroup.Item>
