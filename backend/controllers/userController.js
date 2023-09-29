@@ -1,7 +1,7 @@
 import asyncHandler from '../middleware/asyncHandler.js';
 import User from '../models/userModel.js';
 
-const authUser = asyncHandler(async(req, res) =>{
+const loginUser = asyncHandler(async(req, res) =>{
     res.send('auth user');
 });
 
@@ -37,3 +37,14 @@ const updateUser = asyncHandler(async(req, res)=>{
     res.send('update user');
 });
 
+export {
+    loginUser,
+    registerUser,
+    logoutUser,
+    getUserProfile,
+    updateUser,
+    updateUserProfile,
+    getUsers,
+    getUserById,
+    deleteUser
+}
