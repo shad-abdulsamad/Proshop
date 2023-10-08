@@ -13,14 +13,14 @@ connectDB();
 
 const app = express();
 
-//body parser middleware
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
 
 //cookie parser middleware
 app.use(cookieParser());
 app.use(cors());
 
+//body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
     res.send("API is running");
